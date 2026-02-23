@@ -1,0 +1,16 @@
+create database clientesdb;
+use clientesdb;
+
+create table usuarios(
+id int auto_increment primary key not null,
+asunto varchar(50), 
+comentario varchar(150)
+);
+
+insert into usuarios values(null,"Valentina","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis neque semper.");
+
+select * from usuarios;
+
+UPDATE usuarios SET usuarios.asunto="",usuarios.comentario=""Where usuarios.id="";
+
+DELETE from usuarios WHERE usuarios.id=4;
