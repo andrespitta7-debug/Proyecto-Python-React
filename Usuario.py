@@ -44,7 +44,7 @@ class CAsunto:
             cursor.execute(sql,valores)
             cone.commit()
             print(cursor.rowcount,"Registro actualizado")
-            cone.close    
+            cone.close()    
 
         
         except mysql.connector.Error as error:
@@ -59,7 +59,7 @@ class CAsunto:
             cursor.execute(sql,valores)
             cone.commit()
             print(cursor.rowcount,"Registro eliminado")
-            cone.close    
+            cone.close()    
 
         
         except mysql.connector.Error as error:

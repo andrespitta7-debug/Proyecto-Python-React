@@ -16,4 +16,3 @@ class CConexion:
             print("Error al conectarse a la base de datos {}".format(error))
 
             return conexion
-    ConexionBaseDeDatos()

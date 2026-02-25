@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: clientesdb #
+      MYSQL_ROOT_PASSWORD: '' #
+      ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
